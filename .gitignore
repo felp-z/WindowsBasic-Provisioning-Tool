@@ -1,0 +1,18 @@
+# Arquivos específicos do PowerShell
+*.ps1xml
+*.psd1
+ps_history.txt
+
+# Módulos baixados localmente
+/Modules/
+
+# Arquivos de perfil de usuário local que não devem ser compartilhados
+profile.ps1
+Microsoft.PowerShell_profile.ps1
+
+# Arquivos de sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos de configuração do VSCode (se você usar)
+.vscode/
