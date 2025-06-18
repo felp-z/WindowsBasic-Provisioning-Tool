@@ -1,0 +1,14 @@
+{
+  "winget": [
+    "Google.Chrome",
+    "7zip.7zip",
+    "AnyDeskSoftware.AnyDesk"
+  ],
+  "custom": [
+    {
+      "name": "Office LTSC Professional Plus 2021",
+      "installerPath": "D:\\format\\installers\\Office2021\\setup.exe",
+      "arguments": "/configure configuration.xml"
+    }
+  ]
+}
