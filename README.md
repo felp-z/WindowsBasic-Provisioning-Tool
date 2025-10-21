@@ -8,7 +8,7 @@ This project views post-installation setup not as a repetitive chore, but as the
 
 ## Features
 
--   **Application Installation:** Installs packages via `winget` and local installers (`.exe`/`.msi`).
+-   **Application Installation:** Installs packages via `winget`, `choco` and local installers (`.exe`/`.msi`).
 -   **Bloatware Removal:** Cleans the system of unwanted pre-installed applications.
 -   **System Optimization:** Applies performance tweaks, such as the high-performance power plan and disabling background apps.
 -   **Graphics Tweaks:** Configures Windows visual effects for maximum responsiveness.
@@ -63,6 +63,7 @@ The strength of this tool lies in its adaptability through simple configuration 
 Defines the applications to be installed.
 
 -   **`winget`**: An array of package IDs from the Windows Package Manager.
+-   **`choco`**: An array of package IDs from the Chocolatey package manager.
 -   **`custom`**: An array of objects for local installers.
     -   `name`: The application's name for display in the console.
     -   `installerPath`: Absolute or relative path to the executable. **Note:** Use double backslashes (`\\`) in the JSON path.
@@ -74,6 +75,10 @@ Defines the applications to be installed.
   "winget": [
     "Google.Chrome",
     "7zip.7zip"
+  ],
+  "choco": [
+    "nodejs",
+    "git"
   ],
   "custom": [
     {
@@ -103,7 +108,6 @@ Defines the applications to be removed. Provide a list with the exact Microsoft 
 
 This project is the foundation for an even more robust provisioning system. Potential evolutions include:
 
--   **Chocolatey Integration:** Add another package manager for greater flexibility.
 -   **Registry Configuration:** Create a script that applies registry settings from a `.reg` file or a structured JSON.
 -   **Modularization:** Transform each script into an independent function within a single PowerShell module, facilitating distribution and reuse.
 
